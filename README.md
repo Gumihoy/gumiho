@@ -1,4 +1,6 @@
 # gumiho
-1、SQL to Abstract syntax tree 
+1、SQL to Abstract Syntax Tree
+
 2、SQL Format
-3、SQL transform
+
+3、SQL Transform
