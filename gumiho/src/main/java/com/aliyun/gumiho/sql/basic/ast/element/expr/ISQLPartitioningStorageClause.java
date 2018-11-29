@@ -1,0 +1,11 @@
+package com.aliyun.gumiho.sql.basic.ast.element.expr;
+
+/**
+ * partitioning_storage_clause
+ * https://docs.oracle.com/en/database/oracle/oracle-database/18/sqlrf/CREATE-INDEX.html#GUID-1F89BBC0-825F-4215-AF71-7588E31D8BFE
+ * @author kongtong.ouyang on 2018/7/9.
+ */
+public interface ISQLPartitioningStorageClause extends SQLExpr {
+    @Override
+    ISQLPartitioningStorageClause clone();
+}

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.alibaba:druid:1.1.6-preview_30">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.1.6-preview_30/druid-1.1.6-preview_30.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.1.6-preview_30/druid-1.1.6-preview_30-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.1.6-preview_30/druid-1.1.6-preview_30-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

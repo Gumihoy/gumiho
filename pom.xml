@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.aliyun.gumiho</groupId>
+    <artifactId>gumiho-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <inceptionYear>2017</inceptionYear>
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+    <organization>
+        <name>kent</name>
+        <url>https://github.com/kent-bo-hai</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>Kent</id>
+            <name>Kent</name>
+            <email>kent.bohai@gmail.com</email>
+        </developer>
+    </developers>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <current.year>${maven.build.timestamp}</current.year>
+        <maven.build.timestamp.format>yyyy</maven.build.timestamp.format>
+    </properties>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+            </plugin>
+
+            <!--<plugin>-->
+            <!--<groupId>org.codehaus.mojo</groupId>-->
+            <!--<artifactId>build-helper-maven-plugin</artifactId>-->
+            <!--<version>3.0.0</version>-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<id>timestamp-property</id>-->
+            <!--<goals>-->
+            <!--<goal>timestamp-property</goal>-->
+            <!--</goals>-->
+            <!--<phase>validate</phase>-->
+            <!--<configuration>-->
+            <!--<name>current.year</name>-->
+            <!--<pattern>yyyy</pattern>-->
+            <!--</configuration>-->
+            <!--</execution>-->
+            <!--</executions>-->
+            <!--</plugin>-->
+
+            <!-- license-maven-plugin -->
+            <!--<plugin>-->
+            <!--<groupId>com.mycila</groupId>-->
+            <!--<artifactId>license-maven-plugin</artifactId>-->
+            <!--<version>3.0</version>-->
+            <!--<configuration>-->
+            <!--<header>${basedir}/LICENSE</header>-->
+            <!--<properties>-->
+            <!--<current.year>${current.year}</current.year>-->
+            <!--&lt;!&ndash;<owner>Mycila</owner>&ndash;&gt;-->
+            <!--&lt;!&ndash;<email>mathieu.carbou@gmail.com</email>&ndash;&gt;-->
+            <!--</properties>-->
+            <!--<includes>-->
+            <!--<include>**/*.java</include>-->
+            <!--</includes>-->
+            <!--&lt;!&ndash;<excludes>&ndash;&gt;-->
+            <!--&lt;!&ndash;<exclude>**/README</exclude>&ndash;&gt;-->
+            <!--&lt;!&ndash;<exclude>src/test/resources/**</exclude>&ndash;&gt;-->
+            <!--&lt;!&ndash;<exclude>src/main/resources/**</exclude>&ndash;&gt;-->
+            <!--&lt;!&ndash;<exclude>*.xml</exclude>&ndash;&gt;-->
+            <!--&lt;!&ndash;</excludes>&ndash;&gt;-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.21.0</version>
+                <configuration>
+                    <includes>
+                        <include>**/bvt/**/*.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <modules>
+        <module>gumiho</module>
+        <module>gumiho-web</module>
+    </modules>
+
+</project>

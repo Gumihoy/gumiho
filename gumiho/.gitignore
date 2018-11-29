@@ -1,0 +1,38 @@
+# Gradle
+build
+gradle.properties
+.gradle
+local.properties
+
+# maven ignore
+target/
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+bin
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+# packages ignore (optional)
+# *.jar
+# *.war
+# *.zip
+# *.tar
+# *.tar.gz
